@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /*태그 선택자*/
+      li{
+        color: red;
+        text-decoration: underline;
+      }
+      /*모든 select에 대해 효과를 적용하겠다는 의미.
+      그러니 의도한대로 적용이 안 됨
+      아이디선택자가 아닌 태그선택자를 적용한 셈
+      */
+      select{
+        font-size: 10px;
+      }
+      /*아이디 선택자: #을 붙여준다*/
+      #select{
+        font-size: 50px;
+      }
+      #deactive{
+        text-decoration: line-through;
+      }
+      .deactive{
+        text-decoration:overline;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <ui>
+      <li id="deactive">HTML</li>
+      <li id="select">CSS</li>
+      <li id="deactive">JavaScript</li>
+    </ui>
+
+    <br>
+    <p>이렇게 해도 되지만 규칙위반이다. 이럴땐 id가 아닌 class를 써 줘야 한다.</p>
+    <p>#은 id선택자</p>
+    <p>.은 클래스 선택자</p>
+    <br>
+
+    <ui>
+      <li class="deactive">HTML</li>
+      <li id="select">CSS</li>
+      <li class="deactive">JavaScript</li>
+    </ui>
+
+  </body>
+</html>

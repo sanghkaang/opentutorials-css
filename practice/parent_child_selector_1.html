@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /*ul 아래 li에 대해서만 적용하란 뜻*/
+      ul li{
+        color: red;
+      }
+      /*직계 자손에 대해서만 적용하라*/
+      #lecture>li{
+        border: 1px solid red;
+
+        /*color는 직계자손이 아니라 전체에 다 적용된다. 이건 상속때문이다. 추후 다룰 예정*/
+        color: blue;
+      }
+      /*복수 선택*/
+      ul,ol{
+        background-color: powderblue;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+    <ol id="lecture">
+      <li>HTML</li>
+      <li>CSS
+        <ol>
+          <li>selector</li>
+          <li>declaration</li>
+        </ol>
+      </li>
+      <li>JavaScript</li>
+    </ol>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /*태그 선택자*/
+      li{
+        color: red;
+        text-decoration: underline;
+      }
+      /*모든 select에 대해 효과를 적용하겠다는 의미.
+      그러니 의도한대로 적용이 안 됨
+      아이디선택자가 아닌 태그선택자를 적용한 셈
+      */
+      select{
+        font-size: 10px;
+      }
+      /*아이디 선택자: #을 붙여준다*/
+      #select{
+        font-size: 50px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <ui>
+      <li>HTML</li>
+      <li id="select">CSS</li>
+      <li>JavaScript</li>
+    </ui>
+  </body>
+</html>
